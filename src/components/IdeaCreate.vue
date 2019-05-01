@@ -26,7 +26,7 @@ export default {
         createdAt: new Date(),
         title: this.title
       };
-      this.$store.commit("CREATE_IDEA", idea);
+      this.$store.dispatch("createIdea", idea);
       this.title = "";
     }
   }

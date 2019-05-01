@@ -13,5 +13,9 @@ export default new Vuex.Store({
       state.ideas[id] = payload;
     }
   },
-  actions: {}
+  actions: {
+    createIdea({ commit }, payload) {
+      commit("CREATE_IDEA", payload);
+    }
+  }
 });
