@@ -21,6 +21,12 @@ export default new Vuex.Store({
     },
     SAVE_COURSES_ORDERING(state, payload) {
       state.courses = [...payload];
+    },
+    SAVE_PAPERWORK_ORDERING(state, payload) {
+      state.paperWork = [...payload];
+    },
+    SAVE_APPOINTMENTS_ORDERING(state, payload) {
+      state.appointments = [...payload];
     }
   },
   actions: {
@@ -36,6 +42,12 @@ export default new Vuex.Store({
     },
     saveCoursesOrdering({ commit }, payload) {
       commit("SAVE_COURSES_ORDERING", payload);
+    },
+    savePaperWorkOrdering({ commit }, payload) {
+      commit("SAVE_PAPERWORK_ORDERING", payload);
+    },
+    saveAppointmentsOrdering({ commit }, payload) {
+      commit("SAVE_APPOINTMENTS_ORDERING", payload);
     }
   },
   getters: {
@@ -46,6 +58,12 @@ export default new Vuex.Store({
     },
     courses(state) {
       return state.courses;
+    },
+    paperWork(state) {
+      return state.paperWork;
+    },
+    appointments(state) {
+      return state.appointments;
     }
   }
 });
