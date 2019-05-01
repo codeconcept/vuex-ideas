@@ -33,8 +33,10 @@ export default {
 <style scoped>
 .ideas {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
+  height: 30vh;
 }
 </style>
