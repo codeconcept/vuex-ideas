@@ -2,18 +2,16 @@
   <div>
     <h1>Ideas</h1>
     <ul>
-      <li>aze</li>
-      <li>qsd</li>
+      <li v-for="idea in allIdeas" :key="idea.id">{{ idea.title }}</li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    ideas: {
-      type: Object,
-      default: null
+  computed: {
+    allIdeas() {
+      return this.$store.getters.allIdeas;
     }
   }
 };
