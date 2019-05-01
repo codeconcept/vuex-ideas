@@ -2,7 +2,8 @@
   <div>
     <h1>Ideas</h1>
     <ul>
-      <li></li>
+      <li>aze</li>
+      <li>qsd</li>
     </ul>
   </div>
 </template>
