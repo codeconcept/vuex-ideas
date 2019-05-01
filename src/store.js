@@ -4,7 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    ideas: {}
+  },
+  mutations: {
+    CREATE_IDEA(state, payload) {
+      const id = Date.now();
+      state.ideas[id] = payload;
+    }
+  },
   actions: {}
 });
