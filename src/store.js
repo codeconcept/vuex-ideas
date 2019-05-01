@@ -12,11 +12,21 @@ export default new Vuex.Store({
       const id = Date.now();
       state.ideas[id] = payload;
       state.ideas = { ...state.ideas };
+    },
+    SAVE_IDEAS_ORDERING(state, payload) {
+      state.ideas = { ...payload };
     }
   },
   actions: {
     createIdea({ commit }, payload) {
       commit("CREATE_IDEA", payload);
+    },
+    saveIdeasOrdering({ commit }, payload) {
+      const ideas = {};
+      payload.map(idea => {
+        ideas[idea.id] = idea;
+      });
+      commit("SAVE_IDEAS_ORDERING", payload);
     }
   },
   getters: {
